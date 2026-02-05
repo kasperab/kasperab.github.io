@@ -1,0 +1,15 @@
+body {
+	margin: auto;
+	max-width: 800px;
+	background-color: black;
+}
+
+h1, p {
+	font-family: monospace;
+	font-size: 16px;
+	color: white;
+}
+
+h1 {
+	font-weight: bold;
+}
