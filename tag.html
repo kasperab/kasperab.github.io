@@ -1,0 +1,58 @@
+---
+layout: base
+---
+
+{% for category in site.categories %}
+	<div class="tagGroup">
+		<h2>Category: {{ category[0] }}</h2>
+		<div class="postGrid">
+			{% for post in category[1] %}
+				<div>
+					<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+					<p>
+						{% for postCat in post.categories %}
+							<a href="#{{ postCat }}">{{ postCat }}</a>
+						{% endfor %}
+						{% for postTag in post.tags %}
+							<a href="#{{ postTag }}">{{ postTag }}</a>
+						{% endfor %}
+					</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endfor %}
+
+{% for tag in site.tags %}
+	<div class="tagGroup">
+		<h2>Tag: {{ tag[0] }}</h2>
+		<div class="postGrid">
+			{% for post in tag[1] %}
+				<div>
+					<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+					<p>
+						{% for postCat in post.categories %}
+							<a href="#{{ postCat }}">{{ postCat }}</a>
+						{% endfor %}
+						{% for postTag in post.tags %}
+							<a href="#{{ postTag }}">{{ postTag }}</a>
+						{% endfor %}
+					</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endfor %}
+
+<h3>Categories</h3>
+<p>
+	{% for category in site.categories %}
+		<a href="#{{ category }}">{{ category }}</a>
+	{% endfor %}
+</p>
+<h3>Tags</h3>
+<p>
+	{% for tag in site.tags %}
+		<a href="#{{ tag }}">{{ tag }}</a>
+	{% endfor %}
+</p>

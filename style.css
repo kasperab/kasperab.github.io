@@ -13,3 +13,23 @@ h1, p {
 h1 {
 	font-weight: bold;
 }
+
+.tagGroup {
+	display: none;
+	&:target {
+		display: block;
+	}
+}
+
+.postGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	column-gap: 16px;
+	row-gap: 16px;
+}
+
+.postGrid div {
+	border: 2px solid white;
+	border-radius: 8px;
+	padding: 8px;
+}
