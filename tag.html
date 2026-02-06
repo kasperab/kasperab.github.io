@@ -3,7 +3,7 @@ layout: base
 ---
 
 {% for category in site.categories %}
-	<div class="tagGroup">
+	<div id="{{ category[0] }}" class="tagGroup">
 		<h2>Category: {{ category[0] }}</h2>
 		<div class="postGrid">
 			{% for post in category[1] %}
@@ -24,7 +24,7 @@ layout: base
 {% endfor %}
 
 {% for tag in site.tags %}
-	<div class="tagGroup">
+	<div id="{{ tag[0] }}" class="tagGroup">
 		<h2>Tag: {{ tag[0] }}</h2>
 		<div class="postGrid">
 			{% for post in tag[1] %}
