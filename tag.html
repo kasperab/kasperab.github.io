@@ -47,12 +47,12 @@ layout: base
 <h3>Categories</h3>
 <p>
 	{% for category in site.categories %}
-		<a href="#{{ category }}">{{ category }}</a>
+		<a href="#{{ category[0] }}">{{ category[0] }}</a>
 	{% endfor %}
 </p>
 <h3>Tags</h3>
 <p>
 	{% for tag in site.tags %}
-		<a href="#{{ tag }}">{{ tag }}</a>
+		<a href="#{{ tag[0] }}">{{ tag[0] }}</a>
 	{% endfor %}
 </p>
