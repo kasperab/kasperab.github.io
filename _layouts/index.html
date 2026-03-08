@@ -1,0 +1,30 @@
+---
+layout: base
+---
+
+<header>
+	<a href="/"><h1>Kasper Andersson Brandt</h1></a>
+	<h2>Programmer</h2>
+</header>
+
+<main>
+	{{ content }}
+</main>
+
+<footer>
+	<h4>Categories</h4>
+	<p>
+		{% assign sorted_categories = site.categories | sort %}
+		{% for category in sorted_categories %}
+			<a href="/tag#{{ category[0] }}">{{ category[0] }}</a>
+		{% endfor %}
+	</p>
+
+	<h4>Tags</h4>
+	<p>
+		{% assign sorted_tags = site.tags | sort %}
+		{% for tag in sorted_tags %}
+			<a href="/tag#{{ tag[0] }}">{{ tag[0] }}</a>
+		{% endfor %}
+	</p>
+</footer>

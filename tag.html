@@ -1,14 +1,13 @@
 ---
-layout: base
 ---
 
 {% for category in site.categories %}
 	<div id="{{ category[0] }}" class="tagGroup">
-		<h2>Category: {{ category[0] }}</h2>
+		<h3>Category: {{ category[0] }}</h3>
 		<div class="postGrid">
 			{% for post in category[1] %}
 				<div>
-					<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+					<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
 					<p>
 						{% for postCat in post.categories %}
 							<a href="#{{ postCat }}">{{ postCat }}</a>
@@ -25,11 +24,11 @@ layout: base
 
 {% for tag in site.tags %}
 	<div id="{{ tag[0] }}" class="tagGroup">
-		<h2>Tag: {{ tag[0] }}</h2>
+		<h3>Tag: {{ tag[0] }}</h3>
 		<div class="postGrid">
 			{% for post in tag[1] %}
 				<div>
-					<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+					<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
 					<p>
 						{% for postCat in post.categories %}
 							<a href="#{{ postCat }}">{{ postCat }}</a>
@@ -43,16 +42,3 @@ layout: base
 		</div>
 	</div>
 {% endfor %}
-
-<h3>Categories</h3>
-<p>
-	{% for category in site.categories %}
-		<a href="#{{ category[0] }}">{{ category[0] }}</a>
-	{% endfor %}
-</p>
-<h3>Tags</h3>
-<p>
-	{% for tag in site.tags %}
-		<a href="#{{ tag[0] }}">{{ tag[0] }}</a>
-	{% endfor %}
-</p>
