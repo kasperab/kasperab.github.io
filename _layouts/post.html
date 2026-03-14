@@ -1,0 +1,21 @@
+---
+layout: base
+---
+
+<header>
+	<h4>Kasper Andersson Brandt</h4>
+	<h4>Programmer</h4>
+</header>
+
+<main>
+	<h3>{{ page.title }}</h3>
+	<p>
+		{% for category in page.categories %}
+			<a href="tag#{{ category }}">{{ category }}</a>
+		{% endfor %}
+		{% for tag in page.tags %}
+			<a href="tag#{{ tag }}">{{ tag }}</a>
+		{% endfor %}
+	</p>
+	{{ content }}
+</main>
