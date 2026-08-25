@@ -4,6 +4,7 @@ defaults:
       path: ""
     values:
       layout: index
+      description: Programming portfolio
   -
     scope:
       path: ""
