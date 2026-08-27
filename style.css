@@ -58,8 +58,15 @@ p {
 	font-size: 16px;
 }
 
-footer p {
+main > p, footer p {
 	margin-bottom: 16px;
+	overflow-y: hidden;
+	img {
+		width: 35%;
+		float: right;
+		margin-left: 16px;
+		margin-bottom: 16px;
+	}
 }
 
 figure img, video {
