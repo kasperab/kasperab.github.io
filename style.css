@@ -103,7 +103,7 @@ figure img, video {
 		grid-template-columns: 1fr;
 	}
 }
-.highlighter-rouge {
+div.highlighter-rouge {
 	padding: 16px;
 	margin-bottom: 16px;
 	background-color: light-dark(hsl(230, 1%, 98%), hsl(220, 13%, 18%));
@@ -133,4 +133,10 @@ figure img, video {
 	.mf, .mi, .nb, .m, .bp, .kc {
 		color: light-dark(hsl(35, 99%, 36%), hsl(29, 54%, 61%)); /* orange */
 	}
+}
+
+code.highlighter-rouge {
+	background-color: light-dark(hsl(230, 1%, 98%), hsl(220, 13%, 18%));
+	color: light-dark(hsl(230, 8%, 24%), hsl(220, 14%, 71%));
+	padding: 0 4px;
 }
