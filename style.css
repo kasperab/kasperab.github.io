@@ -21,7 +21,7 @@ body {
 	color: light-dark(black, white);
 }
 
-header, .postGrid div, h3, footer h4, main > p, footer p {
+header, .postGrid div, h3, main > h4, footer h4, main > p, main > ul, footer p {
 	padding: 16px;
 	background-color: light-dark(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.5));
 	border-radius: 16px;
@@ -54,11 +54,11 @@ h4 {
 	font-size: 24px;
 }
 
-p {
+p, ul {
 	font-size: 16px;
 }
 
-main > p, footer p {
+main > p, main > ul, footer p {
 	margin-bottom: 16px;
 	overflow-y: hidden;
 	img {
@@ -67,6 +67,14 @@ main > p, footer p {
 		margin-left: 16px;
 		margin-bottom: 16px;
 	}
+}
+
+ul {
+	padding-left: 16px;
+}
+
+main > ul > li::marker {
+	font-size: 0;
 }
 
 figure img, video {
