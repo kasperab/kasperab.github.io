@@ -40,15 +40,12 @@ body {
 header, .postGrid div, h3, main > h4, footer h4, main > p, main > ul, footer p {
 	padding: 16px;
 	background-color: light-dark(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.5));
+	margin-bottom: 16px;
 	border-radius: 16px;
 }
 
-main {
-	margin: 32px 0;
-}
-
 h1 {
-	font-size: 48px;
+	font-size: 40px;
 }
 
 header a {
@@ -57,11 +54,10 @@ header a {
 }
 
 h2 {
-	font-size: 40px;
+	font-size: 24px;
 }
 
 h3 {
-	margin-bottom: 8px;
 	font-size: 32px;
 }
 
@@ -74,8 +70,7 @@ p, ul {
 	font-size: 16px;
 }
 
-main > p, main > ul, footer p {
-	margin-bottom: 16px;
+main > p {
 	overflow-y: hidden;
 	img {
 		width: 35%;
@@ -86,7 +81,7 @@ main > p, main > ul, footer p {
 }
 
 ul {
-	padding-left: 16px;
+	padding-left: 32px;
 }
 
 main > ul > li::marker {
@@ -125,8 +120,7 @@ figure img, video {
 .postGrid {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	column-gap: 8px;
-	row-gap: 8px;
+	column-gap: 16px;
 	@media (width <= 640px) {
 		grid-template-columns: 1fr 1fr;
 	}
