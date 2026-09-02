@@ -37,7 +37,7 @@ body {
 	color: light-dark(black, white);
 }
 
-header, .postGrid div, h3, main > h4, footer h4, main > p, main > ul, footer p {
+header, .postGrid div, footer div, h3, main > h4, main > p, main > ul {
 	padding: 16px;
 	margin-bottom: 16px;
 	background-color: light-dark(rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.6));
@@ -132,6 +132,28 @@ figure img, video {
 		grid-template-columns: 1fr;
 	}
 }
+
+.tags {
+	line-height: 2.5em;
+}
+
+.category, .tag {
+	padding: 4px;
+	border: solid 1px;
+	border-radius: 16px;
+	text-decoration: none;
+}
+
+.category {
+	color: light-dark(hsl(5, 74%, 59%), hsl(355, 65%, 65%));
+	border-color: light-dark(hsl(5, 74%, 59%), hsl(355, 65%, 65%));
+}
+
+.tag {
+	color: light-dark(hsl(301, 63%, 40%), hsl(286, 60%, 67%));
+	border-color: light-dark(hsl(301, 63%, 40%), hsl(286, 60%, 67%));
+}
+
 div.highlighter-rouge {
 	padding: 16px;
 	margin-bottom: 16px;

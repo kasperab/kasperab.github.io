@@ -12,19 +12,23 @@ layout: base
 </main>
 
 <footer>
-	<h4>Categories</h4>
-	<p>
-		{% assign sorted_categories = site.categories | sort %}
-		{% for category in sorted_categories %}
-			<a href="/tag#{{ category[0] }}">{{ category[0] }}</a>
-		{% endfor %}
-	</p>
+	<div>
+		<h4>Categories</h4>
+		<p class="tags">
+			{% assign sorted_categories = site.categories | sort %}
+			{% for category in sorted_categories %}
+				<a href="/tag#{{ category[0] }}" class="category">{{ category[0] }}</a>
+			{% endfor %}
+		</p>
+	</div>
 
-	<h4>Tags</h4>
-	<p>
-		{% assign sorted_tags = site.tags | sort %}
-		{% for tag in sorted_tags %}
-			<a href="/tag#{{ tag[0] }}">{{ tag[0] }}</a>
-		{% endfor %}
-	</p>
+	<div>
+		<h4>Tags</h4>
+		<p class="tags">
+			{% assign sorted_tags = site.tags | sort %}
+			{% for tag in sorted_tags %}
+				<a href="/tag#{{ tag[0] }}" class="tag">{{ tag[0] }}</a>
+			{% endfor %}
+		</p>
+	</div>
 </footer>
