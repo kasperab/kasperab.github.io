@@ -1,3 +1,20 @@
+@font-face {
+	font-family: "Montserrat";
+	src: url("fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Anonymous Pro";
+	font-style: normal;
+	src: url("fonts/AnonymousPro-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Anonymous Pro";
+	font-style: italic;
+	src: url("fonts/AnonymousPro-Italic.ttf");
+}
+
 :root {
 	color-scheme: light dark;
 }
@@ -16,8 +33,7 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	font-family: sans-serif;
-	font-weight: normal;
+	font-family: "Montserrat", sans-serif;
 	color: light-dark(black, white);
 }
 
@@ -125,7 +141,11 @@ div.highlighter-rouge {
 	border-radius: 16px;
 	overflow-x: scroll;
 	tab-size: 4;
-	color: light-dark(hsl(230, 8%, 24%), hsl(220, 14%, 71%));
+	code {
+		font-family: "Anonymous Pro", monospace;
+		font-size: 16px;
+		color: light-dark(hsl(230, 8%, 24%), hsl(220, 14%, 71%));
+	}
 	.c1 {
 		color: light-dark(hsl(230, 4%, 64%), hsl(220, 10%, 40%));
 		font-style: italic;
@@ -151,7 +171,9 @@ div.highlighter-rouge {
 }
 
 code.highlighter-rouge {
-	background-color: light-dark(hsl(230, 1%, 98%), hsl(220, 13%, 18%));
-	color: light-dark(hsl(230, 8%, 24%), hsl(220, 14%, 71%));
 	padding: 0 4px;
+	background-color: light-dark(hsl(230, 1%, 98%), hsl(220, 13%, 18%));
+	font-family: "Anonymous Pro", monospace;
+	font-size: 16px;
+	color: light-dark(hsl(230, 8%, 24%), hsl(220, 14%, 71%));
 }
