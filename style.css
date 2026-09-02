@@ -44,6 +44,10 @@ header, .postGrid div, footer div, h3, main > h4, main > p, main > ul {
 	border-radius: 16px;
 }
 
+header {
+	overflow-y: hidden;
+}
+
 h1 {
 	font-size: 40px;
 }
@@ -54,6 +58,7 @@ header a {
 }
 
 h2 {
+	display: inline;
 	font-size: 24px;
 }
 
