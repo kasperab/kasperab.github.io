@@ -9,13 +9,29 @@ layout: base
 
 <main>
 	<h3>{{ page.title }}</h3>
-	<p>
+	<p class="tags">
 		{% for category in page.categories %}
-			<a href="tag#{{ category }}">{{ category }}</a>
+			<a href="tag#{{ category }}" class="category">{{ category }}</a>
 		{% endfor %}
 		{% for tag in page.tags %}
-			<a href="tag#{{ tag }}">{{ tag }}</a>
+			<a href="tag#{{ tag }}" class="tag">{{ tag }}</a>
 		{% endfor %}
+	</p>
+	<p>
+		{{ page.description }}
+		{% if page.web or page.code %}
+			<br><br>
+		{% endif %}
+		{% if page.web %}
+			<a href="{{ page.web }}" class="icon" target="_blank">
+				{% include web.html %}
+			</a>
+		{% endif %}
+		{% if page.code %}
+			<a href="{{ page.code }}" class="icon" target="_blank">
+				{% include github.html %}
+			</a>
+		{% endif %}
 	</p>
 	{{ content }}
 </main>

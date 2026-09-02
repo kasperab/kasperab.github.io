@@ -98,6 +98,14 @@ figure img, video {
 	margin-bottom: 16px;
 }
 
+.icon {
+	text-decoration: none;
+	svg {
+		height: 32px;
+		fill: light-dark(black, white);
+	}
+}
+
 .video-container {
 	overflow: hidden;
 	padding-bottom: 56.25%;
