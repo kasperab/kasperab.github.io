@@ -1,0 +1,32 @@
+<div class="post-grid">
+	{% for post in include.posts %}
+		<div>
+			<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+			<p class="tags">
+				{% for postCat in post.categories %}
+					<a href="#{{ postCat }}" class="category">{{ postCat }}</a>
+				{% endfor %}
+				{% for postTag in post.tags %}
+					<a href="#{{ postTag }}" class="tag">{{ postTag }}</a>
+				{% endfor %}
+			</p>
+			<p>
+				{{ post.description }}
+			</p>
+			{% if post.web or post.code %}
+				<p>
+					{% if post.web %}
+						<a href="{{ post.web }}" class="icon" target="_blank">
+							{% include web.html %}
+						</a>
+					{% endif %}
+					{% if post.code %}
+						<a href="{{ post.code }}" class="icon" target="_blank">
+							{% include github.html %}
+						</a>
+					{% endif %}
+				</p>
+			{% endif %}
+		</div>
+	{% endfor %}
+</div>

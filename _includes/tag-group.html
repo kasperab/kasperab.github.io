@@ -1,0 +1,5 @@
+<div id="{{ include.tag[0] }}" class="tag-group">
+	<h3>{{ include.title }}: {{ include.tag[0] }}</h3>
+	{% assign posts = include.tag[1] %}
+	{% include post-grid.html posts=posts %}
+</div>

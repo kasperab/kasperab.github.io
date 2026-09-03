@@ -37,7 +37,7 @@ body {
 	color: light-dark(black, white);
 }
 
-header, .postGrid div, footer div, h3, main > h4, main > p, main > ul {
+header, .post-grid div, footer div, h3, main > h4, main > p, main > ul {
 	padding: 16px;
 	margin-bottom: 16px;
 	background-color: light-dark(rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.6));
@@ -127,14 +127,14 @@ figure img, video {
 	position: absolute;
 }
 
-.tagGroup {
+.tag-group {
 	display: none;
 	&:target {
 		display: block;
 	}
 }
 
-.postGrid {
+.post-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	column-gap: 16px;
@@ -143,6 +143,9 @@ figure img, video {
 	}
 	@media (width <= 480px) {
 		grid-template-columns: 1fr;
+	}
+	p {
+		margin-bottom: 8px;
 	}
 }
 

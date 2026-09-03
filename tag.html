@@ -2,43 +2,9 @@
 ---
 
 {% for category in site.categories %}
-	<div id="{{ category[0] }}" class="tagGroup">
-		<h3>Category: {{ category[0] }}</h3>
-		<div class="postGrid">
-			{% for post in category[1] %}
-				<div>
-					<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-					<p class="tags">
-						{% for postCat in post.categories %}
-							<a href="#{{ postCat }}" class="category">{{ postCat }}</a>
-						{% endfor %}
-						{% for postTag in post.tags %}
-							<a href="#{{ postTag }}" class="tag">{{ postTag }}</a>
-						{% endfor %}
-					</p>
-				</div>
-			{% endfor %}
-		</div>
-	</div>
+	{% include tag-group.html title="Category" tag=category %}
 {% endfor %}
 
 {% for tag in site.tags %}
-	<div id="{{ tag[0] }}" class="tagGroup">
-		<h3>Tag: {{ tag[0] }}</h3>
-		<div class="postGrid">
-			{% for post in tag[1] %}
-				<div>
-					<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-					<p class="tags">
-						{% for postCat in post.categories %}
-							<a href="#{{ postCat }}" class="category">{{ postCat }}</a>
-						{% endfor %}
-						{% for postTag in post.tags %}
-							<a href="#{{ postTag }}" class="tag">{{ postTag }}</a>
-						{% endfor %}
-					</p>
-				</div>
-			{% endfor %}
-		</div>
-	</div>
+	{% include tag-group.html title="Tag" tag=tag %}
 {% endfor %}
