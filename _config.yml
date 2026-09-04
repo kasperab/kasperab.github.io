@@ -4,7 +4,7 @@ defaults:
       path: ""
     values:
       layout: index
-      description: Programming portfolio
+      description: Programmer with experience in fullstack and game development, using a variety of languages.
   -
     scope:
       path: ""
