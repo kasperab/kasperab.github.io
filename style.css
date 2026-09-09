@@ -29,7 +29,7 @@ body {
 	padding: 16px;
 	max-width: 800px;
 	background-color: light-dark(white, black);
-	background-image: url("images/background.webp");
+	background-image: light-dark(url("images/background_light.webp"), url("images/background.webp"));
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -40,7 +40,7 @@ body {
 header, .post-grid div, footer div, h3, main > h4, main > p, main > ul {
 	padding: 16px;
 	margin-bottom: 16px;
-	background-color: light-dark(rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.6));
+	background-color: light-dark(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
 	border-radius: 16px;
 }
 
@@ -76,7 +76,7 @@ p, ul {
 }
 
 a {
-	color: light-dark(hsl(221, 87%, 60%), hsl(187, 47%, 55%));
+	color: light-dark(hsl(198, 99%, 37%), hsl(187, 47%, 55%));
 }
 
 main > p {
