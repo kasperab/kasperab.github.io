@@ -29,12 +29,15 @@ body {
 	padding: 16px;
 	max-width: 800px;
 	background-color: light-dark(white, black);
-	background-image: light-dark(url("images/background_light.webp"), url("images/background.webp"));
+	background-image: url("images/background.webp");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	font-family: "Montserrat", sans-serif;
 	color: light-dark(black, white);
+	@media (prefers-color-scheme: light) {
+		background-image: url("images/background_light.webp");
+	}
 }
 
 header, .post-grid div, footer div, h3, main > h4, main > p, main > ul {
