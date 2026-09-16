@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
-		<title>
-			{% if page.title %}
-				{{ page.title }} -
-			{% endif %}
-			Kasper Andersson Brandt
-		</title>
+		{% if page.title %}
+			<title>{{ page.title }} - Kasper Andersson Brandt</title>
+		{% else %}
+			<title>Kasper Andersson Brandt</title>
+		{% endif %}
 		<meta charset="utf-8">
 		<meta name="description" content="{{ page.description }}">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
