@@ -2,9 +2,9 @@
 <html lang="en" dir="ltr">
 	<head>
 		{% if page.title %}
-			<title>{{ page.title }} - Kasper Andersson Brandt</title>
+			<title>{{ page.title }} - {{ site.title }}</title>
 		{% else %}
-			<title>Kasper Andersson Brandt</title>
+			<title>{{ site.title }}</title>
 		{% endif %}
 		<meta charset="utf-8">
 		<meta name="description" content="{{ page.description }}">
