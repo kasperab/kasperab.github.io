@@ -195,10 +195,10 @@ div.highlighter-rouge {
 	.nf {
 		color: light-dark(hsl(221, 87%, 60%), hsl(207, 82%, 66%)); /* blue */
 	}
-	.k, .ow, .kd {
+	.k, .ow, .kd, .kn {
 		color: light-dark(hsl(301, 63%, 40%), hsl(286, 60%, 67%)); /* purple */
 	}
-	.s, .s2 {
+	.s, .s2, .sa, .sh, .se {
 		color: light-dark(hsl(119, 34%, 47%), hsl(95, 38%, 62%)); /* green */
 	}
 	.n, .na, .nx {
